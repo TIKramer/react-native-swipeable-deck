@@ -2,18 +2,27 @@
 
 A swipe deck for react native in simular style as tinder
 
-## Installation
+## Getting started 👨‍🏫
 
-```sh
+
 npm install react-native-swipeable-deck
-```
+
+or
+
+yarn add @ react-native-swipeable-deck
+
 
 ## Usage
+### Import 
 
-```js
+```javascript
 import { SwipeDeck } from "react-native-swipeable-deck";
+```
 
 // ...
+### Example
+Adding the component:
+```js
 
   <SwipeDeck
           data={DATA}
@@ -22,33 +31,26 @@ import { SwipeDeck } from "react-native-swipeable-deck";
           onSwipeLeft={(item) => onSwipeLeft(item)}
           onSwipeRight={(item) => onSwipeRight(item)}
        />
-
-    const renderCard = (item: SwipeData) =>
-  {
-    return (
-        //Will render one card - place what ever you want the card to look like
-    )
-  }
-
-
-  const onSwipeLeft = (item) =>
-  {
-    //What ever you want to happen on a left card swipe
-  };
-  const onSwipeRight = (item: SwipeData) =>
-  {
-
-    //What ever you want to happen on a right card swipe
-  };
-
-  const renderNoMoreCards = () =>
-  {
-    return (
-             //Will render when the deck is empty
-
-    );
-  };
 ```
+### Props
+
+#### deck
+  An array of data that is to be used for the swipeable deck.
+  Each element in the deck is passed to renderCard, onSwipeLeft, onSwipeRight
+  
+#### renderCard(item)
+Will render one card - here is where you create the component and styling of a single card.
+   
+#### onSwipeLeft(item) 
+What ever you want to happen on a left card swipe
+  
+#### onSwipeRight(item) 
+What ever you want to happen on a right card swipe
+    
+#### renderNoMoreCards
+Here create component that is to be render when the user reaches the end of the deck
+ 
+
 ## Demo
 
 <p float="left">
