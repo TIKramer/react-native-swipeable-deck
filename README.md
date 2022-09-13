@@ -53,9 +53,8 @@ Here create component that is to be render when the user reaches the end of the 
 
 ## Demo
 
-<p float="left">
-	<img src="https://github.com/TIKramer/react-native-swipeable-deck/blob/master/screenshots/demo.gif" width="300" height="650">
-  
+https://user-images.githubusercontent.com/6935835/189821963-7a0a662b-4d82-4265-991b-edef19bca5b4.mp4
+
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
@@ -67,3 +66,5 @@ MIT
 ---
 
 Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
+
+
