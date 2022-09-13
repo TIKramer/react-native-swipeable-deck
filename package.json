@@ -1,5 +1,5 @@
 {
-  "name": "react-native-swipe-deck",
+  "name": "react-native-swipeable-deck",
   "version": "0.1.0",
   "description": "test",
   "main": "lib/commonjs/index",
@@ -13,7 +13,7 @@
     "android",
     "ios",
     "cpp",
-    "react-native-swipe-deck.podspec",
+    "react-native-swipeable-deck.podspec",
     "!lib/typescript/example",
     "!android/build",
     "!ios/build",
@@ -35,13 +35,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/TIKramer/react-native-swipe-deck",
+  "repository": "https://github.com/TIKramer/react-native-swipeable-deck",
   "author": "Thomas Kramer <kramer.ian.thomas@gmail.com> (https://github.com/TIKramer)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TIKramer/react-native-swipe-deck/issues"
+    "url": "https://github.com/TIKramer/react-native-swipeable-deck/issues"
   },
-  "homepage": "https://github.com/TIKramer/react-native-swipe-deck#readme",
+  "homepage": "https://github.com/TIKramer/react-native-swipeable-deck#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -53,7 +53,7 @@
     "@release-it/conventional-changelog": "^5.0.0",
     "@types/jest": "^28.1.2",
     "@types/react": "~17.0.21",
-    "@types/react-native": "0.68.0",
+    "@types/react-native": "^0.70.0",
     "commitlint": "^17.0.2",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.5.0",

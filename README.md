@@ -1,5 +1,7 @@
 # react-native-swipe-deck
+
 A swipe deck for react native in simular style as tinder
+
 ## Installation
 
 ```sh
@@ -9,11 +11,43 @@ npm install react-native-swipe-deck
 ## Usage
 
 ```js
-import { SwipeDeckView } from "react-native-swipe-deck";
+import { Deck } from "react-native-swipeable-deck";
 
 // ...
 
-<SwipeDeckView color="tomato" />
+  <Deck
+          data={DATA}
+          renderNoMoreCards={renderNoMoreCards}
+          renderCard={renderCard}
+          onSwipeLeft={(item) => onSwipeLeft(item)}
+          onSwipeRight={(item) => onSwipeRight(item)}
+       />
+
+    const renderCard = (item: SwipeData) =>
+  {
+    return (
+        //Will render one card - place what ever you want the card to look like
+    )
+  }
+
+
+  const onSwipeLeft = (item) =>
+  {
+    //What ever you want to happen on a left card swipe
+  };
+  const onSwipeRight = (item: SwipeData) =>
+  {
+
+    //What ever you want to happen on a right card swipe
+  };
+
+  const renderNoMoreCards = () =>
+  {
+    return (
+             //Will render when the deck is empty
+
+    );
+  };
 ```
 
 ## Contributing
