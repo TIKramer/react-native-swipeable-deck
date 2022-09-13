@@ -42,10 +42,10 @@ Adding the component:
 Will render one card - here is where you create the component and styling of a single card.
    
 #### onSwipeLeft(item) 
-What ever you want to happen on a left card swipe
+What ever you want to happen on a left card swipe- data of the currently swiped item is passed 
   
 #### onSwipeRight(item) 
-What ever you want to happen on a right card swipe
+What ever you want to happen on a right card swipe - data of the currently swiped item is passed
     
 #### renderNoMoreCards
 Here create component that is to be render when the user reaches the end of the deck
