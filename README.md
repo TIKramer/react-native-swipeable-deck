@@ -1,21 +1,21 @@
-# react-native-swipe-deck
+# react-native-swipeable-deck
 
 A swipe deck for react native in simular style as tinder
 
 ## Installation
 
 ```sh
-npm install react-native-swipe-deck
+npm install react-native-swipeable-deck
 ```
 
 ## Usage
 
 ```js
-import { Deck } from "react-native-swipeable-deck";
+import { SwipeDeck } from "react-native-swipeable-deck";
 
 // ...
 
-  <Deck
+  <SwipeDeck
           data={DATA}
           renderNoMoreCards={renderNoMoreCards}
           renderCard={renderCard}
@@ -49,7 +49,11 @@ import { Deck } from "react-native-swipeable-deck";
     );
   };
 ```
+## Demo
 
+<p float="left">
+	<img src="https://github.com/TIKramer/react-native-swipeable-deck/blob/master/screenshots/demo.gif" width="300" height="650">
+  
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
