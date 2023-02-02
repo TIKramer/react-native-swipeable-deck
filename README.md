@@ -49,7 +49,10 @@ What ever you want to happen on a right card swipe - data of the currently swipe
     
 #### renderNoMoreCards
 Here create component that is to be render when the user reaches the end of the deck
- 
+
+#### handleOnEndReached
+A callback called when the stack reaches the end
+
 
 ## Demo
 
