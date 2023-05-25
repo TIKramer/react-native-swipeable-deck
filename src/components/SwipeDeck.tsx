@@ -9,7 +9,7 @@ import {
   View,
   GestureResponderEvent,
 } from 'react-native';
-import { Direction, SDProps } from 'src/ts/swipeDeck';
+import { Direction, Item, SDProps } from 'src/ts/swipeDeck';
 import {
   FORCE_ANIMATION_DURATION,
   INDENT_SIDE_MULTIPLIER,
@@ -23,14 +23,14 @@ import {
   SWIPE_THRESHOLD,
 } from '../constants/SwipeDeck';
 
-const SwipeDeck: React.FC<SDProps<any>> = ({
+export function SwipeDeck<T extends Item>({
   renderCard,
   data,
   onSwipeRight = () => {},
   onSwipeLeft = () => {},
   renderNoMoreCards = () => undefined,
   handleEndReached = () => {},
-}) => {
+}: SDProps<T>) {
   const [cardIndex, setCardIndex] = useState(0);
   const [dataChanged, setDataChanged] = useState(false);
 
@@ -169,7 +169,7 @@ const SwipeDeck: React.FC<SDProps<any>> = ({
     }
   };
   return <View>{renderCards()}</View>;
-};
+}
 const styles = StyleSheet.create({
   card: {
     opacity: 1,
