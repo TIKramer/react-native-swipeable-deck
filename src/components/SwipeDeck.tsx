@@ -9,7 +9,6 @@ import {
   View,
   GestureResponderEvent,
 } from 'react-native';
-import { Direction, Item, SDProps } from 'src/ts/swipeDeck';
 import {
   FORCE_ANIMATION_DURATION,
   INDENT_SIDE_MULTIPLIER,
@@ -22,6 +21,26 @@ import {
   SCREEN_WIDTH,
   SWIPE_THRESHOLD,
 } from '../constants/SwipeDeck';
+
+//TYPES
+interface Item {
+  id: string;
+}
+
+enum Direction {
+  Left,
+  Right,
+}
+
+type SDProps<T extends Item> = {
+  renderCard(item: T): React.ReactNode;
+  data: T[];
+  onSwipeRight?(item: T): void;
+  onSwipeLeft?(item: T): void;
+  renderNoMoreCards?(): React.ReactNode;
+  handleEndReached?(): void;
+};
+//END TYPES
 
 export function SwipeDeck<T extends Item>({
   renderCard,
@@ -96,7 +115,9 @@ export function SwipeDeck<T extends Item>({
 
   const onSwipeComplete = (direction: Direction) => {
     const item = data[latestValue.current];
-    direction === Direction.Right ? onSwipeRight(item) : onSwipeLeft(item);
+    if (item) {
+      direction === Direction.Right ? onSwipeRight(item) : onSwipeLeft(item);
+    }
     postion.setValue({ x: INITIAL_X_POSITION, y: INITIAL_Y_POSITION });
     setCardIndex(latestValue.current + 1);
   };
