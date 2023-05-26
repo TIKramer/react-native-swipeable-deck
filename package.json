@@ -1,6 +1,6 @@
 {
   "name": "react-native-swipeable-deck",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a swipeable deck for react native tinder style",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -32,8 +32,13 @@
   },
   "keywords": [
     "react-native",
-    "ios",
-    "android"
+    "tinder",
+    "deck",
+    "animation",
+    "cards",
+    "swipe",
+    "swiper",
+    "tinder swipe"
   ],
   "repository": "https://github.com/TIKramer/react-native-swipeable-deck",
   "author": "Thomas Kramer <kramer.ian.thomas@gmail.com> (https://github.com/TIKramer)",

@@ -1,30 +1,33 @@
-import React from "react";
-import { useState } from "react";
-import { FlatList, StyleSheet, Text, View } from "react-native";
-import { Card, Paragraph, Title } from "react-native-paper";
-import { SwipeDeck } from "react-native-swipeable-deck";
+/* eslint-disable no-use-before-define */
+// @ts-nocheck
+
+import React from 'react';
+import { useState } from 'react';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { Card, Paragraph, Title } from 'react-native-paper';
+import { SwipeDeck } from 'react-native-swipeable-deck';
 
 const DATA = [
   {
     id: 1,
-    name: "Thomas Kramer",
-    occupation: "React Native Developer",
-    uri: "https://avatars.githubusercontent.com/u/6935835?v=4",
-    description: "I enjoy coding, coffee, and watching movies.",
+    name: 'Thomas Kramer',
+    occupation: 'React Native Developer',
+    uri: 'https://avatars.githubusercontent.com/u/6935835?v=4',
+    description: 'I enjoy coding, coffee, and watching movies.',
   },
   {
     id: 2,
-    name: "Peter Bearson",
-    occupation: "Fisherman",
-    uri: "https://picsum.photos/id/433/600",
-    description: "I enjoy fish, and sleeping in on cold winter nights.",
+    name: 'Peter Bearson',
+    occupation: 'Fisherman',
+    uri: 'https://picsum.photos/id/433/600',
+    description: 'I enjoy fish, and sleeping in on cold winter nights.',
   },
   {
     id: 3,
-    name: "Doug Dogson",
-    occupation: "Stay at home son",
-    uri: "https://picsum.photos/id/1025/600",
-    description: "I enjoy treats and belly scratches",
+    name: 'Doug Dogson',
+    occupation: 'Stay at home son',
+    uri: 'https://picsum.photos/id/1025/600',
+    description: 'I enjoy treats and belly scratches',
   },
 ];
 
@@ -38,8 +41,8 @@ type SwipeData = {
 
 export default function App() {
   const [swipeData, setSwipeData] = useState<string[]>([]);
-  const [dataState, setDataState] = useState(DATA)
-  
+  const [dataState, setDataState] = useState(DATA);
+
   const renderCard = (item: SwipeData) => {
     return (
       <Card mode="elevated" elevation={4} style={{ marginHorizontal: 20 }}>
@@ -78,10 +81,10 @@ export default function App() {
   const renderNoMoreCards = () => {
     return (
       <Card mode="elevated" elevation={4} style={{ marginHorizontal: 20 }}>
-        <Card.Title title={"Out of cards"} />
+        <Card.Title title={'Out of cards'} />
         <Card.Content style={{ height: 300 }}>
           <View
-            style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+            style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
           >
             <Paragraph> You have swiped every one in your area</Paragraph>
           </View>
@@ -101,13 +104,12 @@ export default function App() {
       </View>
       <View style={styles.deckContainer}>
         <SwipeDeck
-        //   handleEndReached={() => setDataState([...DATA])}
+          //   handleEndReached={() => setDataState([...DATA])}
           data={dataState}
           renderNoMoreCards={renderNoMoreCards}
           renderCard={renderCard}
           onSwipeLeft={(item: SwipeData) => onSwipeLeft(item)}
           onSwipeRight={(item: SwipeData) => onSwipeRight(item)}
-        
         />
       </View>
       <View style={styles.footer}>
@@ -125,20 +127,20 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 30,
-    backgroundColor: "#F5FCFF",
+    backgroundColor: '#F5FCFF',
   },
   titleContainer: { flex: 0.2 },
   deckContainer: {
     flex: 1,
-    alignItems: "flex-start",
+    alignItems: 'flex-start',
   },
   contentContainer: {
     flex: 0.3,
   },
   footer: {
     paddingTop: 30,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     flex: 0.2,
   },
 });
