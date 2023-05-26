@@ -218,6 +218,10 @@ initialRotation, initialXPosition, initialYPosition, rotationMultiplier, and rot
 
 Feel free to adjust these prop values according to your specific design requirements
 
+## Code example:
+
+To see a working code example, visit the [React Native Swipeable Deck Example](https://github.com/TIKramer/react-native-swipeable-deck/tree/master/example) in the repository.
+
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.

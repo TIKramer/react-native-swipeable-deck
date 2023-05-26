@@ -1,6 +1,6 @@
 {
   "name": "react-native-swipeable-deck",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "a swipeable deck for react native tinder style",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
